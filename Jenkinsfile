@@ -2,13 +2,13 @@ pipeline {
     agent any
     
     environment {
-        SONAR_URL = 'http://34.30.219.230:9000'
+        SONAR_URL = 'http://34.27.111.131:9000'
         SONAR_TOKEN = credentials('sonar-token')  // Add this in Jenkins credentials
     }
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/ameda71/mvnsonardoc.git'
+                git branch: 'main', url: 'https://github.com/Saicharan619/mvnsonardoc.git'
             }
         }
         stage('Build with Maven') {
